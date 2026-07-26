@@ -146,25 +146,6 @@ Equity Score = 0.40 × Heat Exposure
 
 ---
 
-## Connecting Real Data
-
-To transition from synthetic to real Landsat 8 thermal data (free via Google Earth Engine):
-
-```python
-# Replace generate_data() in modules/data_generator.py
-import ee
-ee.Initialize()
-
-mumbai = ee.Geometry.Rectangle([72.77, 18.89, 73.00, 19.27])
-lst_image = (ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
-             .filterBounds(mumbai)
-             .filterDate('2024-04-01', '2024-06-30')
-             .select(['ST_B10'])
-             .mean()
-             .multiply(0.00341802).add(149.0).subtract(273.15))  # Kelvin to Celsius
-```
-
----
 
 ## Cost
 
