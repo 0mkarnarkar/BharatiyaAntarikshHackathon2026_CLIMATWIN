@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit secrets (if added later)
+.streamlit/secrets.toml
+
+# Byte-compiled / optimized
+*.egg-info/
+dist/
+build/
